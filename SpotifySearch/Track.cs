@@ -15,7 +15,9 @@ namespace SpotifySearch
         {
             get
             {
-                return string.Join(", ", Artists);
+                if (Artists != null)
+                    return string.Join(", ", Artists);
+                else return "Unknown Artist";
             }
         }
         public string Album { get; set; }
